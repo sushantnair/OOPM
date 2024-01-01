@@ -1,0 +1,88 @@
+class pclass1
+{
+    static boolean rooms[] = {false, false, false, false, false};
+    pclass1()
+    {
+        
+    }
+    static int getvacancystatus()
+    {
+        for(int i = 0; i < rooms.length; i++)
+        {
+            if(rooms[i] == false){
+             
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+class cclass1 extends pclass1
+{
+    int roll_no, room_allotted;
+    String name;
+    boolean allotment_status;
+    cclass1()
+    {
+
+    }
+    cclass1(int roll_no, String name)
+    {
+        this.roll_no = roll_no;
+        this.name = name;
+        this.allotment_status = false;
+        this.room_allotted = -1;
+    }
+    
+    void allot_room()
+    {
+        int vacancy_room_id;
+        vacancy_room_id = pclass1.getvacancystatus();
+        if(vacancy_room_id != -1)
+        {
+            this.allotment_status = true;
+            this.room_allotted = vacancy_room_id+1; 
+            rooms[vacancy_room_id] = true;
+            //System.out.println("Room Number:\n "+vacancy_room_id);
+        }
+    }
+    void display()
+    {
+          System.out.println("Roll no "+this.roll_no);
+        System.out.println("\nName "+this.name);
+      
+        System.out.println("\nAllotment Status "+this.allotment_status);
+        System.out.println("\nRoom Number: "+this.room_allotted+"\n");
+    }
+}
+public class pclass1main
+{
+    public static void main(String args[])
+    {
+        
+        cclass1 ob1 = new cclass1(121, "Sushant");
+        cclass1 ob2 = new cclass1(122, "Sahil");
+        cclass1 ob3 = new cclass1(123, "Krishna");
+        cclass1 ob4 = new cclass1(124, "Chaitanya");
+        cclass1 ob5 = new cclass1(125, "Rohit");
+        cclass1 ob6 = new cclass1(126, "Ameya");
+        ob1.allot_room();
+        ob1.display();
+        
+        ob2.allot_room();
+        ob2.display();
+        
+        ob3.allot_room();
+        ob3.display();
+        
+        ob4.allot_room();
+        ob4.display();
+        
+        ob5.allot_room();
+        ob5.display();
+        
+        ob6.allot_room();
+        ob6.display();
+        
+    }
+}
