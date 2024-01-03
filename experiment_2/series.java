@@ -59,7 +59,7 @@ public class series {
         y = sc.nextDouble();
         System.out.println("Enter the number of terms both series should have: ");
         num = sc.nextInt();
-        myMath ob = new myMath(x, y, num);
+        //myMath ob = new myMath(x, y, num);
         P = myMath.power(x, y);
         F = myMath.fact(x);
         r_s1 = myMath.ser1(x, num);
@@ -68,5 +68,6 @@ public class series {
         System.out.println("The result of " + (int) x + "! is: " + (int) F);
         System.out.println("The result of e^x upto " + num + " terms is: " + r_s1);
         System.out.println("The result of (1+x)^n upto " + num + " terms is: " + r_s2);
+        sc.close();
     }
 }
