@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; 
 
 class CN_OP {
     static double r, i;
@@ -47,5 +47,6 @@ class Complex_Number2 {
         CN_OP.subtract(re1, im1, re2, im2); // accessing static method from outside the class
         ob.multiply(re1, im1, re2, im2); // accessing non-static method from outside class
         ob.divide(re1, im1, re2, im2); // accessing non-static method from outside class
+        sc.close();
     }
 }
