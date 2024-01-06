@@ -104,5 +104,6 @@ public class banking_using_array_of_objects {
         } else {
             System.out.println("Sorry! The initial number of accounts cannot exceed the number of accounts.");
         }
+        sc.close();
     }
 }
