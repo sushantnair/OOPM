@@ -33,5 +33,6 @@ public class time_exception {
             System.out.println("Do you want to continue?\nPress 'Y' otherwise press any character: ");
             ch = in.next().charAt(0);
         } while (ch == 'Y');
+        in.close();
     }
 }
