@@ -107,5 +107,6 @@ public class employee_management_system_using_vector {
                     System.out.println("Please enter '1', '2', '3', '4', '5' or '6' only and try again!");
             }
         } while (ch != 6);
+        in.close();
     }
 }
