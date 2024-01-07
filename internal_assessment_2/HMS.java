@@ -1,3 +1,4 @@
+package internal_assessment_2;
 import java.util.*;
 
 class Hostel {
